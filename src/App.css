@@ -1,0 +1,110 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+header, footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  left: 0;
+}
+
+header {
+  top: 0;
+}
+
+footer {
+  bottom: 0;
+}
+
+header h1, footer p {
+  margin: 0;
+}
+
+/* Navigation styles */
+header nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main content styling */
+.main-content {
+  flex: 1;
+  padding-top: 60px; /* Adjust based on header height */
+  padding-bottom: 60px; /* Adjust based on footer height */
+  overflow: auto;
+}
+
+/* Section styling */
+section {
+  padding: 2rem;
+}
+
+#home {
+  height: 100vh; /* Full viewport height for home section */
+}
+
+/* Custom card styles */
+.custom-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.custom-card h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.custom-card p {
+  margin: 0;
+}
+
+/* Responsive styles for custom cards */
+@media (min-width: 600px) {
+  .custom-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (min-width: 900px) {
+  section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .custom-card {
+    margin: 0;
+  }
+}
